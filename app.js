@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "*",
+    origin: process.env.FRONTEND_URI,
     methods: ["GET", "POST", "PUT", "DELETE"],
     // for bringing cookies on the frontend
     credentials: true,
