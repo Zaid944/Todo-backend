@@ -5,6 +5,7 @@ import ErrorHandler from "../middlewares/error.js";
 
 export const register = async (req, res, next) => {
   try {
+    console.log(res.header);
     const { name, email, password } = req.body;
     let user = await User.findOne({ email });
 
